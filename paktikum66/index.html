@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum 6 - Basic JavaScript</title>
+</head>
+<body>
+  <h1>Praktikum 6: Basic JavaScript</h1>
+  <p>tugas alya</p>
+
+  <script>
+    // 2. Output, Variabel, dan Tipe Data
+    const nama = "Alya";
+    let umur = 19;
+    let nilai = 85;
+    let aktif = true;
+    const prodi = "Teknik Informatika";
+
+    console.log("Nama:", nama);
+    console.log("Umur:", umur);
+    console.log("Nilai:", nilai);
+    console.log("Status aktif:", aktif);
+    console.log("Tipe nilai:", typeof nilai);
+    console.log("Program Studi:", prodi);
+
+    // 3. Operator dan Perhitungan Sederhana
+    const tugas = 80;
+    const uts = 75;
+    let uas = 50;
+    const nilaiAkhir = (tugas * 0.3) + (uts * 0.3) + (uas * 0.4);
+    const lulus = nilaiAkhir >= 60;
+
+    console.log("Nilai akhir =", nilaiAkhir);
+    console.log("Lulus =", lulus);
+
+    console.log("Contoh operator:");
+    console.log("Tambah:", 10 + 5);
+    console.log("Kurang:", 10 - 5);
+    console.log("Kali:", 10 * 5);
+    console.log("Bagi:", 10 / 5);
+    console.log("Sisa bagi:", 10 % 3);
+
+    // 4. Percabangan if, else if, else
+    function tentukanKategori(nilaiUjian) {
+      let kategori;
+
+      if (nilaiUjian >= 85) {
+        kategori = "A";
+      } else if (nilaiUjian >= 70) {
+        kategori = "B";
+      } else if (nilaiUjian >= 60) {
+        kategori = "C";
+      } else {
+        kategori = "D";
+      }
+
+      console.log("Nilai:", nilaiUjian);
+      console.log("Kategori:", kategori);
+      return kategori;
+    }
+
+    tentukanKategori(78);
+    tentukanKategori(92);
+    tentukanKategori(65);
+    tentukanKategori(45);
+
+    // 5. Perulangan dan Fungsi Dasar
+    function hitungDiskon(harga, persen) {
+      return harga - (harga * persen / 100);
+    }
+
+    for (let i = 1; i <= 3; i++) {
+      const harga = i * 10000;
+      const bayar = hitungDiskon(harga, 10);
+
+      console.log("Harga:", harga);
+      console.log("Harga bayar =", bayar);
+    }
+
+    // D. Praktikum Mandiri - Pengolah Nilai Mahasiswa
+    const namaMahasiswa = "Alya";
+    const nilaiTugas = 80;
+    const nilaiUts = 70;
+    const nilaiUas = 90;
+
+    const nilaiAkhirMahasiswa =
+      (nilaiTugas * 0.30) +
+      (nilaiUts * 0.30) +
+      (nilaiUas * 0.40);
+
+    let statusKelulusan;
+    if (nilaiAkhirMahasiswa >= 60) {
+      statusKelulusan = "LULUS";
+    } else {
+      statusKelulusan = "TIDAK LULUS";
+    }
+
+    console.log("Nama mahasiswa:", namaMahasiswa);
+    console.log("Nilai akhir:", nilaiAkhirMahasiswa);
+    console.log("Status kelulusan:", statusKelulusan);
+  </script>
+</body>
+</html>
